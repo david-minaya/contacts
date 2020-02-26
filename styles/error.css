@@ -1,0 +1,18 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.error {
+  font-size: 52px;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+  margin-top: 320px;
+}
+
+.message {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 8px;
+}
