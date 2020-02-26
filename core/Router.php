@@ -5,7 +5,7 @@ class Router {
   static $routes = [];
   
   static function addRoutes($routes) {
-    self::$routes += $routes;
+    self::$routes = $routes;
   }
 
   static function redirect(string $uri) {

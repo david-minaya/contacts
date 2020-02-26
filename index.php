@@ -3,9 +3,10 @@
 require './models/Contact.php';
 require './core/Database.php';
 require './core/Router.php';
-require './core/RandomColor.php';
+require './core/RandomColors.php';
 
 Database::init('sqlite:database.db');
+RandomColors::addColors(['aliceblue', 'lavender', 'lightsalmon', 'antiquewhite', 'pink']);
 
 Router::addRoutes([
   '/' => './controllers/index.controller.php',
