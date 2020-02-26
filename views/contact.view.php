@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="/styles/contact.css">
 </head>
 <body>
-  <div class="container">
+  <a class="back" href="/">Back</a>
+  <div class="contact">
     <div class="icon" style="background-color: <?= $contact->color ?>">
       <?= $contact->name[0] ?>
     </div>
