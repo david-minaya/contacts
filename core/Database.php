@@ -21,11 +21,19 @@ class Database {
     }
 
     static function addContact(Contact $contact) {
-        $agregate = self::$pdo->prepare('INSERT INTO contacts (name, email, phone) VALUES (:name, :email, :phone);');
+
+        $agregate = self::$pdo->prepare(
+            'INSERT INTO 
+                contacts (name, email, phone, color) 
+             VALUES 
+                (:name, :email, :phone, :color);'
+        );
+
         $agregate->execute([
             ':name' => $contact->name,
             ':email' => $contact->email,
-            ':phone' => $contact->phone
+            ':phone' => $contact->phone,
+            ':color' => $contact->color
         ]);
     }
 

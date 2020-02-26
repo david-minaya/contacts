@@ -4,6 +4,7 @@ $contact = new Contact();
 $contact->name = $_POST['name'];
 $contact->email = $_POST['email'];
 $contact->phone = $_POST['phone'];
+$contact->color = RandomColor::getColor();
 
 Database::addContact($contact);
 

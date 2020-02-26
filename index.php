@@ -1,8 +1,9 @@
 <?php
 
 require './models/Contact.php';
-require './core/Router.php';
 require './core/Database.php';
+require './core/Router.php';
+require './core/RandomColor.php';
 
 Database::init('sqlite:database.db');
 
