@@ -1,25 +1,19 @@
 <?php
 
-require './Route.php';
-require './Router.php';
-require './Contact.php';
+require './models/Contact.php';
+require './core/Router.php';
+require './core/Database.php';
 
-$pdo = new PDO('sqlite:database.db');
-
-$statement1 = $pdo->prepare('INSERT INTO contacts (name, email, phone) VALUES (:name, :email, :phone);');
-$statement1->execute([':name' => 'a', ':email' => 'b', ':phone' => 'c']);
-
-$statement = $pdo->prepare('SELECT name, email, phone FROM contacts;');
-$statement->execute();
-$contacts = $statement->fetchAll(PDO::FETCH_CLASS, 'Contact');
+Database::init('sqlite:database.db');
 
 Router::addRoutes([
-  new Route('GET', '/', './pages/index.php'),
-  new Route('GET', '/contact', './pages/contact.php'),
-  new Route('POST', '/add_contact', './controllers/add_contact.post.php')
+  '/' => './controllers/index.controller.php',
+  '/contact' => './controllers/contact.controller.php',
+  '/add' => './controllers/add.controller.php',
+  '/delete' => './controllers/delete.controller.php',
+  '/error' => './views/error.view.php'
 ]);
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$method = $_SERVER['REQUEST_METHOD'];
 
-require Router::redirect($uri, $method);
+require Router::redirect($uri);

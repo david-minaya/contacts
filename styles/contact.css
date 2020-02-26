@@ -1,0 +1,48 @@
+body {
+    margin: 0px;
+    justify-content: center;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 450px;
+    margin: 60px auto;
+}
+
+.icon {
+    width: 200px;
+    line-height: 200px;
+    border-radius: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: center;
+    font-size: 120px;
+    background-color: beige;
+    margin: auto;
+}
+
+.name {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-info > * {
+    font-size: 20px;
+    margin-top: 44px;
+}
+
+.delete {
+    width: 100%;
+    display: inline-block;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 48px;
+}

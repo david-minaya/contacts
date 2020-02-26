@@ -7,7 +7,7 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 700px;
+  grid-template-columns: 1fr 600px;
 }
 
 .left-pane {
@@ -30,10 +30,14 @@ body {
   background-color: lightgreen;
   font-size: 100px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .name {
-  font-size: 20px;
+  width: 100%;
+  display: inline-block;
+  font-size: 24px;
+  color: black;
   text-align: center;
   line-height: 60px;
 }
@@ -51,7 +55,7 @@ body {
 
 form {
   width: 320px;
-  margin: 160px auto 0px auto;
+  margin: 120px auto 0px auto;
 }
 
 input {
